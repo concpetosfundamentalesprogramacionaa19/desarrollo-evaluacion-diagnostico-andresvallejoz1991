@@ -1,0 +1,47 @@
+Algoritmo Autonoviles
+	//a Representa el numero de automoviles
+	Escribir "Numero de Automoviles"
+	Definir a Como Entero
+	Definir M Como Caracter
+	Definir P Como Caracter
+	Definir C Como Entero
+	Escribir "Ingrese numero de automoviles"
+	Leer a
+	Para i<-1 Hasta a Con Paso 1 Hacer
+		//M Representa la marca del vehiculo
+		//P Representa el origen el Vehiculo
+		//C Representa el costo del vehiculo
+		Escribir "Ingrese la marca del vehiculo"
+		Leer M
+		Escribir "Ingrese el pais de origen del vehiculo"
+		Leer P
+		Escribir "Ingrese el costo del vehiculo"
+		Leer C
+	Fin Para
+	Para i<-0 Hasta a Con Paso 1 Hacer
+		Si (P=Argentina) Entonces
+			Impuesto<-(C*20)/100
+		Fin Si
+		Si (P=Colombia) Entonces
+			Impuesto<-(C*25)/100
+		Fin Si
+		Si (P=Chile) Entonces
+			Impuesto<-(C*30)/100
+		Fin Si
+		Si (P=Cualquiera) Entonces
+			Impuesto<-(C*40)/100
+		Fin Si
+		Impuesto<-+Impuesto
+	Fin Para
+	Para i<-1 Hasta a Con Paso 1 Hacer
+		PrecioVenta<-C+Impuesto
+	Fin Para
+	Para i<-1 Hasta a Con Paso 1 Hacer
+		Escribir "El total de vehiculos es " a
+		Escribir "El total de impuestos genrados es " Impuesto
+		Escribir "El total del precio de venta de los vehiculos es "  PrecioVenta
+		Escribir "Los vehiculos pertencen a" +P
+	Fin Para
+	
+	
+FinAlgoritmo
